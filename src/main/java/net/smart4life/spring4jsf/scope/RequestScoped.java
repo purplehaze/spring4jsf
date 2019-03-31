@@ -8,7 +8,7 @@ import java.lang.annotation.Target;
 
 import org.springframework.context.annotation.Scope;
 import org.springframework.context.annotation.ScopedProxyMode;
-import org.springframework.stereotype.Component;
+import org.springframework.web.context.WebApplicationContext;
 
 /**
  * Spring bean's request scoped and type safe annotation.
@@ -16,11 +16,10 @@ import org.springframework.stereotype.Component;
  * 
  * Created by ILIN02 on 07.02.2015.
  */
-@Target({ ElementType.TYPE, ElementType.METHOD })
+@Target({ElementType.TYPE, ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
-@Component
-@Scope(value = "request", proxyMode = ScopedProxyMode.TARGET_CLASS)
-public @interface RequestScoped
-{
+@Scope(value = WebApplicationContext.SCOPE_REQUEST, proxyMode = ScopedProxyMode.TARGET_CLASS)
+public @interface RequestScoped {
+
 }

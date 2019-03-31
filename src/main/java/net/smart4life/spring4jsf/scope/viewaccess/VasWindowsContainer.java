@@ -15,6 +15,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Component;
+import org.springframework.web.context.WebApplicationContext;
+
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * ViewAccessScope windows container. It holds one ViewAccessScope container @see VasContainer per windowId (browser tab)
@@ -22,7 +25,8 @@ import org.springframework.stereotype.Component;
  * Created by Roman Ilin on 12.03.2015.
  */
 @Component
-@Scope("session")
+@Scope(WebApplicationContext.SCOPE_SESSION)
+@Slf4j
 public class VasWindowsContainer implements Serializable
 {
 
@@ -33,7 +37,6 @@ public class VasWindowsContainer implements Serializable
 	private int requestTimeout;
 
 	private Map<String, VasContainer> windowContainerMap = new ConcurrentHashMap<>();
-	private final Logger logger = LoggerFactory.getLogger(getClass());
 
 	@Autowired
 	private Environment env;
@@ -56,7 +59,7 @@ public class VasWindowsContainer implements Serializable
 		}
 		catch(Exception e)
 		{
-			logger.error("An Exception occured while evaluating the max Number of Windows: ", e);
+			log.error("An Exception occured while evaluating the max Number of Windows: ", e);
 			maxWindows = DEFAULT_MAX_WINDOWS;
 		}
 
@@ -74,11 +77,11 @@ public class VasWindowsContainer implements Serializable
 		}
 		catch(Exception e)
 		{
-			logger.error("An Exception occured while evaluating the request timeout: ", e);
+			log.error("An Exception occured while evaluating the request timeout: ", e);
 			requestTimeout = DEFAULT_REQUEST_TIMEOUT;
 		}
 
-		logger.info("ViewAccessScopeWindowsContainer initialized with maxWindows={}", maxWindows);
+		log.info("ViewAccessScopeWindowsContainer initialized with maxWindows={}", maxWindows);
 	}
 
 	public VasContainer getVasContainer()

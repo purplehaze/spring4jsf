@@ -8,9 +8,6 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 /**
  * This is container class for ViewAccessScope'd beans for one windowId (normally it is browser tab)
  * On every new non ajax request ViewAccessScoped beans requested by .xhtml pages or other beans
@@ -23,8 +20,6 @@ import org.slf4j.LoggerFactory;
 public class VasContainer implements Serializable
 {
 	private static final long serialVersionUID = 1L;
-
-	private static final Logger logger = LoggerFactory.getLogger(VasContainer.class);
 
 	public static final String NAME = VasContainer.class.getName();
 

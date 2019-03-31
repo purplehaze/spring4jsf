@@ -1,4 +1,4 @@
-package net.smart4life.spring4jsf.scope;
+package net.smart4life.spring4jsf.scope.viewaccess;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
@@ -6,7 +6,6 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-import net.smart4life.spring4jsf.scope.viewaccess.ViewAccessScope;
 import org.springframework.context.annotation.Scope;
 import org.springframework.context.annotation.ScopedProxyMode;
 

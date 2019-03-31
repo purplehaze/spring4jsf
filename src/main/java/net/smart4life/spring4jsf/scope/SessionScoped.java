@@ -8,6 +8,7 @@ import java.lang.annotation.Target;
 
 import org.springframework.context.annotation.Scope;
 import org.springframework.context.annotation.ScopedProxyMode;
+import org.springframework.web.context.WebApplicationContext;
 
 /**
  * Spring bean's session scoped and type safe annotation.
@@ -15,10 +16,10 @@ import org.springframework.context.annotation.ScopedProxyMode;
  * 
  * Created by ILIN02 on 07.02.2015.
  */
-@Target({ ElementType.TYPE, ElementType.METHOD })
+@Target({ElementType.TYPE, ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
-@Scope(value = "session", proxyMode = ScopedProxyMode.TARGET_CLASS)
-public @interface SessionScoped
-{
+@Scope(value = WebApplicationContext.SCOPE_SESSION, proxyMode = ScopedProxyMode.TARGET_CLASS)
+public @interface SessionScoped {
+
 }
