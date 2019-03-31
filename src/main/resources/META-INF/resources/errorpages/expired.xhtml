@@ -1,0 +1,9 @@
+<ui:composition template="layout.xhtml"
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+>
+    <ui:define name="contentTitle">Ihre Session ist abgelaufen!</ui:define>
+    <ui:define name="errorContent">
+        <p><a href="#{requestScope['javax.servlet.error.request_uri']}">Zurück zu Seite</a></p>
+    </ui:define>
+</ui:composition>

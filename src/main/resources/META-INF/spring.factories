@@ -1,0 +1,5 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+net.smart4life.spring4jsf.config.WebConfig,\
+net.smart4life.spring4jsf.scope.view.ViewScopeAutoConfiguration,\
+net.smart4life.spring4jsf.scope.viewaccess.ViewAccessScopeAutoConfiguration,\
+net.smart4life.spring4jsf.config.tomcat.TomcatAutoConfiguration
