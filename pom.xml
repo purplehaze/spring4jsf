@@ -25,7 +25,7 @@
     <inceptionYear>2015</inceptionYear>	
 
 	<properties>
-		<primefaces.version>6.2</primefaces.version>
+		<primefaces.version>7.0</primefaces.version>
 	</properties>
 
 	<dependencies>
@@ -70,11 +70,11 @@
 		      <artifactId>jstl</artifactId>
 		</dependency>				
 
-		<dependency>
+<!-- 		<dependency>
 			<groupId>org.primefaces.themes</groupId>
 			<artifactId>bluesky</artifactId>
 			<version>1.0.10</version>
-		</dependency>
+		</dependency> -->
 		
 		<dependency>
 			<groupId>org.primefaces.extensions</groupId>
@@ -99,6 +99,12 @@
             <version>0.9.11</version>
         </dependency>		
 		<!-- dependencies for JSF end -->
+		
+		<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+			<version>1.4</version>
+		</dependency>
 	</dependencies>
 	
     <licenses>

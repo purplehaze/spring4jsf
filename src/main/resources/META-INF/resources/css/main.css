@@ -1,22 +1,6 @@
-/* Setup defaults since variable in browsers
------------------------------------------------ */
-body, div, span, dd, dt, dl, img, ul, ol, li, p, h1, h2, h3, h4, h5, form, hr, fieldset {
-    margin: 0;
-    padding: 0;
-}
 
 /* Element Defaults
 ----------------------------------------------- */
-
-
-a img {
-    border: none;
-}
-
-td{
-    /*	white-space: normal !important; */
-    padding: 3px 3px !important;
-}
 
 .tdTop{
     vertical-align: top;
@@ -34,48 +18,6 @@ td{
 .colsNoWrap{
     vertical-align: top;
     white-space: nowrap;
-}
-
-
-.statusBar{
-    padding-left: 5px;
-    padding-right: 5px;
-    border-radius: 5px;
-    font-weight: bold;
-    white-space: nowrap !important;
-}
-
-/* Für Schalter in einer Tabellenspalte (ohne Hintergrund und Rahmen, sowie kleiner) */
-.colButton{
-    background: transparent !important;
-    border: none !important;
-    width: 16px !important;
-    height: 16px !important;
-}
-
-.companyHeaderGrid.ui-panelgrid>*>tr,
-.companyHeaderGrid.ui-panelgrid .ui-panelgrid-cell {
-    border: none;
-}
-
-.radioBtnSpace{
-	margin-left:5%
-}
-
-.dialogGroupSpace{
-	margin-top:2%;
-}
-
-.spaceTopXs{
-	margin-top:.5em;
-}
-
-.spaceBottomXs{
-	margin-bottom: .5em;
-}
-
-.ui-datatable-header{
-	text-align:  left !important;
 }
 
 .table-no-header thead {
