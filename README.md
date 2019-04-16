@@ -10,7 +10,10 @@ All you need in your project is to add maven dependency to you projects pom:
 			<version>1.0.0-SNAPSHOT</version>	
 		</dependency>
 ```
-Place your .xhtml pages to ${project_location}/src/main/resources/META-INF/resources directory
+### XHTML content
+Place your .xhtml pages to ${project_location}/src/main/resources/META-INF/resources directory.
+
+### JAVA view controller
 And annotate your first (and hopefully next) view controllers:
 ```
 import org.springframework.stereotype.Component;
@@ -26,3 +29,16 @@ public class BankAccountsController {
 ...
 }
 ```
+Following JSF scopes are supported (please see net.smart4life.spring4jsf.scope package in project)
+- ApplicationScope (native spring supported)
+- RequestScope (native spring supported)
+- SessionScope (native spring supported)
+- FlashScope (custom implementation in project)
+- ViewScope (custom implementation in project)
+- ViewAccessScope (custom implementation in project)
+
+### More configurable JSF/Spring environment
+If you need more configuration possibilities or don't want use primefaces as JSF library you can visit [joinfaces.org](http://joinfaces.org/) page.
+This project gives you much more flexibility (and some additional project dependencies).
+
+
